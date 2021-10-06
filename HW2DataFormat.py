@@ -2,6 +2,15 @@
 Authors: Caffine Overflow-Anjana Nambiar, Hitayshi Shah, Karan Gandhi, Kalyal Pullela 
 CMPE 131-Professor Bond
 Homework2: Data Format
+This program takes a txt file as a parameter and converts it to a
+csv, json, or xml file, based on a second parameter
+
+usage: python HW2DataFormat.py <input text file> <c|j|x)>
+    Format of input text file is a tab deliminated data file.
+    Options: 
+             c - convert to a csv file
+             j - convert to json file
+             x - convert to a xml file
 """
 
 
@@ -65,10 +74,6 @@ def serializeTabbedTxt(filename, option):
         createJSONFile(fileName)
     elif option == 'x': 
         createXMLFile(fileName) 
-
-
-
-
 
 if __name__ == "__main__":
     fileName = str(sys.argv[1])
